@@ -1,7 +1,7 @@
 {
   "name": "demo-cli",
   "bin": {
-    "kkb": "kkb.js"
+    "kkb": "./bin/kkb.js"
   },
   "version": "1.0.0",
   "description": "",
