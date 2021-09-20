@@ -24,11 +24,16 @@ module.exports = async name =>{
     const data = await figlet('KKB Welcome')
     log(data)
 
+    log('🚀创建项目' + name)
+    //await clone('github:su37josephxia/vue-template',name)
+
     log(`🚲安装依赖...`)
-    // await spawn("npm.cmd", ['install'],{cwd :`./${name}`})
+    await spawn("npm.cmd", ["install"],{cwd :`./${name}`})
     log(chalk.green(`
         安装完成
     `))
+
     await spawn(process.platform === 'win32' ? 'npm.cmd' : 'npm', ['run','serve'],{cwd :`./${name}`})
+    open("http://localhost:8080");
 
 }
