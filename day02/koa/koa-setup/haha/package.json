@@ -1,5 +1,5 @@
 {
-    "name": "<%= packageName %>",
+    "name": "haha",
     "version": "0.1.0",
     "main": "index.js",
     "scripts": {
@@ -11,12 +11,12 @@
     "dependencies": {
       "koa": "^1.4.0"
       
-    <% if(router){ %>
+    
       ,"koa-router": "^5.4.0"
-    <% } %>
-    <% if(static){%>
+    
+    
       ,"koa-static": "^1.5.2"
-    <% } %>
+    
 
     }
   

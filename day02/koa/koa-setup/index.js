@@ -40,10 +40,10 @@ fs.writeFileSync(getRootPath() + "/index.js", createIndexTemplate(inputConfig));
 //3.创建了package.json
 fs.writeFileSync("./haha/package.json", createPackageJsonTemplate(inputConfig));
 //4.安装依赖
-execa("yarn",{
-    cwd:getRootPath(),
-    stdio:[2, 2, 2],
-})
+// execa("yarn",{
+//     cwd:getRootPath(),
+//     stdio:[2, 2, 2],
+// })
 
 function getRootPath(){
     return "./haha"
