@@ -4,7 +4,7 @@ import fs from 'fs'
 import {createIndexTemplate} from "./indexTemplate.js"
 import { createPackageJsonTemplate } from './packageJsonTemplate.js'
 // import inquirer from 'inquirer'
-import { execa } from 'execa';
+// import { execa } from 'execa';
 import { get } from 'http';
 
 
