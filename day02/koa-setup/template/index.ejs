@@ -3,7 +3,9 @@ const Koa = require("koa");
 	const Router = require("koa-router");
 <% } %>
 
-
+<% if (static) { %>
+  const serve = require("koa-static");
+  <% } %>
 const app = new Koa();
 
 <% if (router) { %>

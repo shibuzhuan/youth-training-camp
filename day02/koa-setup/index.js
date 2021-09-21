@@ -3,21 +3,21 @@
 import fs from 'fs'
 import {createIndexTemplate} from "./indexTemplate.js"
 import { createPackageJsonTemplate } from './packageJsonTemplate.js'
-import inquirer from 'inquirer'
+// import inquirer from 'inquirer'
 import { execa } from 'execa';
 import { get } from 'http';
 
 
-const answer = await inquirer
-    .prompt([
-        {type:"input", name:"packageName", message:"set package name"},
-        {
-            type:"number",
-            name:"port",
-            message:"set port number",
-            default : ()=> 8080,
-        }
-]);
+// const answer = await inquirer
+//     .prompt([
+//         {type:"input", name:"packageName", message:"set package name"},
+//         {
+//             type:"number",
+//             name:"port",
+//             message:"set port number",
+//             default : ()=> 8080,
+//         }
+// ]);
 
 
 
