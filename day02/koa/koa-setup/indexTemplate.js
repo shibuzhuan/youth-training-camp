@@ -7,8 +7,8 @@ export function createIndexTemplate(config){
     const code = ejs.render(template, {
         router: config.middleware.router,
         static: config.middleware.static,
+        port: config.port
     });
 
-    console.log(code);
     return code;
 }

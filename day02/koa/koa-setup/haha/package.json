@@ -1,5 +1,5 @@
 {
-    "name": "haha",
+    "name": "7788",
     "version": "0.1.0",
     "main": "index.js",
     "scripts": {
@@ -12,10 +12,6 @@
       "koa": "^1.4.0"
       
     
-      ,"koa-router": "^5.4.0"
-    
-    
-      ,"koa-static": "^1.5.2"
     
 
     }

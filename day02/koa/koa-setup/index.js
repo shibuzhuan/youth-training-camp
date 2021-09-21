@@ -3,30 +3,19 @@
 import fs from 'fs'
 import {createIndexTemplate} from "./indexTemplate.js"
 import { createPackageJsonTemplate } from './packageJsonTemplate.js'
-// import inquirer from 'inquirer'
+import { question } from './question/index.js'
 // import { execa } from 'execa';
 import { get } from 'http';
 
-
-// const answer = await inquirer
-//     .prompt([
-//         {type:"input", name:"packageName", message:"set package name"},
-//         {
-//             type:"number",
-//             name:"port",
-//             message:"set port number",
-//             default : ()=> 8080,
-//         }
-// ]);
-
-
+const answer = await question()
+console.log(answer);
 
 const inputConfig = {
-    packageName: "haha",
-    port:8080,
+    packageName: answer.packageName,
+    port:answer.port,
     middleware: {
-        static : true,
-        router : true,
+        static : answer.middleware.indexOf("koaStatic") !== -1,
+        router : answer.middleware.indexOf("koaRouter") !== -1,
     },
 }
 
