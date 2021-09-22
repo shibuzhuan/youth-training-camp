@@ -1,22 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
+// import {Button} from 'antd';
+// import 'antd/dist/antd.css';
 
 function App(props) {
-  const arry = [1,2,3,4,5];
-  
-  return (
-    <div className="App">
-      <header className="App-header">
-        {
-        arry.map((element) =>{
-          return(
-          <li key = { element } >
-             <a className = "" > { element} </a>
-          </li >)
-        })
-        }
-        {props.template}
-        <img src={logo} className="App-logo" alt="logo" />
+  let createline = props.template;
+  let header = <header className="App-header">
+    {props.datasource.map(createline)}
+  <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
@@ -28,7 +19,10 @@ function App(props) {
         >
           Learn React
         </a>
-      </header>
+        </header>
+  return (
+    <div className="App">
+      {header}
     </div>
   );
 }
