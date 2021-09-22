@@ -1,9 +1,9 @@
 
 import './App.css';
-import { Row,Col, DatePicker,Input,Menu } from 'antd'
+import { Row,Col, DatePicker,Input,Menu, Button } from 'antd'
 import 'antd/dist/antd.css'
-import { UnorderedListOutlined } from '@ant-design/icons';
-
+import { UnorderedListOutlined,MailOutlined } from '@ant-design/icons';
+import { BigLogo } from './Biglogo';
 const { SubMenu } = Menu;
 
 function App() {
@@ -31,6 +31,19 @@ function App() {
         </SubMenu>
       </Menu>
       </Col>
+      </Row>
+      <Row justify="center">
+        <BigLogo/>
+        {/* <div id = "biglogo" >
+        <img alt = "logo" src = "https://gw.alipayobjects.com/zos/basement_prod/80e7d303-aa05-4c2d-94e9-2255ab5cea6c.svg" />
+        <MailOutlined id="dot"/>
+        </div> */}
+      </Row>
+      <Row justify="center">
+        <div id="btns">
+          <Button type="primary" shape="round">开始使用</Button>
+          <Button type="secondary" shape="round">设计语言</Button>
+        </div>
       </Row>
     </div>
   );
