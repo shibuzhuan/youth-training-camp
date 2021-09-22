@@ -3,13 +3,22 @@ import './App.css';
 // import {Button} from 'antd';
 // import 'antd/dist/antd.css';
 
+import {MyComponent} from './MyComponent.js'
+import {ThemeContext} from "./ThemeContext.js"
+
 function App(props) {
   let createline = props.template;
+
+
   let header = <header className="App-header">
     {props.datasource.map(createline)}
   <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Edit <code>src/App.js
+            </code> and save to reload.
+        <ThemeContext.Provider value={[1,2,3]}>
+          <MyComponent />
+        </ThemeContext.Provider>
         </p>
         <a
           className="App-link"
